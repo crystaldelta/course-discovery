@@ -55,6 +55,7 @@ DB_OVERRIDES = dict(
     NAME=environ.get('DB_MIGRATION_NAME', DATABASES['default']['NAME']),
     HOST=environ.get('DB_MIGRATION_HOST', DATABASES['default']['HOST']),
     PORT=environ.get('DB_MIGRATION_PORT', DATABASES['default']['PORT']),
+    CONN_MAX_AGE=0,
 )
 
 HAYSTACK_CONNECTIONS['default'].update({
